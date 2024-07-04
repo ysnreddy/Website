@@ -1,0 +1,20 @@
+.main_container{
+    background-color:#2A2B2A;
+    display:flex;
+    flex-direction:column;
+    padding:1rem;
+    gap:2rem;
+}
+
+.main_container>h2{
+    color:white;
+    font-size:1.5rem;
+    font-weight:600
+}
+
+.main_container>h2>span{
+    color:#DD1845;
+}
+
+
+

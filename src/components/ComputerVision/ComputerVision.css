@@ -1,0 +1,14 @@
+/* Adjust the existing class names if needed */
+
+/* Example of moving the content upward */
+.move-up {
+    margin-top: -10px; /* Adjust this value to move content up */
+  }
+  
+  /* Responsive design for larger screens */
+  @media (min-width: 768px) {
+    .move-up {
+      margin-top: -20px; /* Adjust this value for larger screens if needed */
+    }
+  }
+  

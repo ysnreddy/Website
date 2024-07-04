@@ -1,0 +1,16 @@
+
+  /* Logo styles */
+  .logo {
+    width: 50px; /* Set the desired smaller width */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  
+  /* Adjust the logo size for larger screens */
+  @media (min-width: 768px) {
+    .logo {
+      width: 300px; /* Slightly larger size for medium and up screens */
+    }
+  }
+  
+  
+  
