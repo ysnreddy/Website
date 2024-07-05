@@ -1,60 +1,53 @@
 import Navbar from "../../components/Navbar/Navbar";
 import ClientWorked from "../../components/ClientWorked/ClientWorked";
 import ComputerVision from "../../components/ComputerVision/ComputerVision";
-import ProjectDiscussForm from "../../components/ProjectDiscussForm/ProjectDiscussForm";
-import Services from "../../components/Services/Services";
-
-
+import Industries from "../../components/Industries/Industries";
+import "./Home.module.css";
+import Title from "../../components/Title/Title";
+import About from "../../components/About/About";
+import Contact from "../../components/Contact/Contact";
 
 const Home = () => {
   return (
-    <div className=" bg-black">
-      
-
+    <div id="home" className="scroll-smooth">
       {/* Hero Section */}
-      <div id="home" className="relative md:pl-16" style={{ height: "100vh" }}>
+      <div id="home" className="relative bg-black md:pl-16" style={{ height: "100vh" }}>
         {/* Overlay with opacity */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
-        
-
         {/* Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-50"
-          
-        >
-         
-         
-           <ClientWorked/>
+        <div className="absolute inset-0 bg-center opacity-50">
+          <ClientWorked />
         </div>
 
         {/* Content */}
-        <div className="flex flex-col items-center justify-center gap-8 w-full h-full text-white text-4xl text-center p-4 relative z-10 md:w-1/2 md:gap-8 md:text-left md:place-items-start">
-        <div className="h-50 z-50 absolute top-10 left-0 w-full p-3 flex  justify-between items-center md:p-6"><Navbar /></div>
-          <h1 className="font-bold md:text-5xl">
-          
-            Building Intelligence through {" "}
-            <span > Vision </span>
-            In Manufacturing
+        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-4 text-center text-white md:w-1/2 md:gap-8 md:text-left md:items-start">
+          <div className="absolute top-10 left-10 w-full p-3 flex justify-between items-center md:p-6">
+            <Navbar />
+          </div>
+          <h1 className="text-4xl font-medium leading-loose antialiased md:text-5xl">
+            Building Intelligence through{" "}
+            <span className="text-4xl font-medium leading-loose antialiased md:text-5xl">Vision in manufacturing</span>
           </h1>
-          <p className="text-lg md:text-xl">
-            Driving Manufacturing Excellence across Industries.
+          <p className="text-lg leading-none md:text-xl hover:leading-loose">
+            Driving manufacturing excellence across industries.
           </p>
-          <a
-            href="#contact"
-            className=" transition duration-500 ease-out hover:duration-500 hover:ease-in-out hover:text-primary "
-          >
-            Book A Demo
+          <a href="#contact" className="transition-transform duration-500 hover:scale-110">
+            <button className="group h-10 pl-5 pr-5 rounded-full flex items-center bg-gradient-to-r from-gray-600 to-gray-400 hover:to-gray-100 font-bold text-xl">
+              Book A Demo 
+            </button>
           </a>
-          
-        
         </div>
       </div>
+
+      <div className="container mx-auto my-auto flex flex-col items-center justify-center h-auto">
+        <Title />
+        <Industries />
+      </div>
+
+      <About />
       <ComputerVision />
-
-      <Services />  
-
-      <ProjectDiscussForm />
+      <Contact />
     </div>
   );
 };

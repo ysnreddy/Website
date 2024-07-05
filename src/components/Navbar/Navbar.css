@@ -1,16 +1,105 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Logo styles */
-  .logo {
-    width: 50px; /* Set the desired smaller width */
-    height: auto; /* Maintain the aspect ratio */
+/* Navbar container styles */
+.navbar-container {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  padding: 1rem 2rem; /* Adjusted padding for better appearance */
+}
+
+.navbar.transparent .navbar-container {
+  background-color: transparent;
+}
+
+.navbar.solid .navbar-container {
+  background-color: #718096; /* grey-slate-400 background color */
+}
+
+/* Logo styles */
+.logo img {
+  height: 50px; /* Adjust as needed */
+  transition: transform 0.3s ease;
+}
+
+/* Navigation link styles */
+.nav-link {
+  transition: all 0.3s ease;
+  color: whitesmoke; /* Ensuring text is whitesmoke for visibility */
+  font-weight: bold; /* Bold text */
+}
+
+.nav-link:hover {
+  color: white; /* Example hover color */
+  transform: scale(1.1);
+}
+
+/* Button styles */
+.btn {
+  background: #FFF;
+  color: #212121;
+  padding: 2px 14px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #1f080862; 
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%); /* Start hidden off-screen */
+}
+
+.mobile-nav-link {
+  transition: all 0.3s ease;
+  color: whitesmoke; /* Ensuring text is whitesmoke for visibility */
+  font-weight: bold; /* Bold text */
+  display: block;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 30px;
+  background: #FFF;
+  color: #212121;
+  text-align: center;
+}
+
+.mobile-nav-link:hover {
+  background: white; /* Example hover color */
+  color: #212121;
+}
+
+/* Overlay styles */
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.5rem 1rem; /* Reduced padding for mobile */
   }
-  
-  /* Adjust the logo size for larger screens */
-  @media (min-width: 768px) {
-    .logo {
-      width: 300px; /* Slightly larger size for medium and up screens */
-    }
+  .logo img {
+    width: 140px; /* Smaller logo size for mobile */
   }
-  
-  
-  
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    width: 300px; /* Larger logo size for medium and up screens */
+  }
+}
+
+@media (max-width: 1000px) {
+  .logo img {
+    width: 140px; /* Adjust the logo size */
+  }
+  .nav-link {
+    margin: 10px 15px; /* Adjust margins for navigation links */
+  }
+}

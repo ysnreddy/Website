@@ -8,4 +8,32 @@
   box-sizing: border-box;
   scroll-behavior:smooth;
 }
+.container{
+ padding-left: 2%;
+  
+}
 
+.btn{
+  background: white;
+  color: rgb(75, 59, 59) ;
+ 
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+@media (max-width: 1200px) {
+   .container{
+    padding-left: 5%;
+    padding-right: 5%;
+
+   }
+
+   .btn{
+    padding: 14px 22px;
+
+   }
+   
+}

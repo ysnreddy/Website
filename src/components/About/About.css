@@ -1,0 +1,20 @@
+/* About.css */
+
+.about {
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+  }
+  
+  /* Ensure the right layout for mobile and tablets */
+  @media (min-width: 640px) {
+    .about-right {
+      flex-direction: row;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .about-right {
+      flex-direction: row;
+    }
+  }
+  

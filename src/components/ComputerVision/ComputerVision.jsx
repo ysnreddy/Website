@@ -1,204 +1,88 @@
+import React, { useState, useEffect } from 'react';
 import Manufacturing from "../../assets/images/manufacturing.png";
 import Retail from "../../assets/images/retail.png";
-import Security from "../../assets/images/security.png";
 import Supply from "../../assets/images/supply-chain.png";
 import './ComputerVision.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const ComputerVision = () => {
-return (
-  <>
-    <div className="md:hidden">
-      <div className="py-20 pl-4 flex flex-col gap-1 md:text-center move-up">
-        <h2 className="text-white text-3xl md:text-4xl">
-          Transform Your Business With
-        </h2>
-        <h1 className="text-primary font-bold text-4xl md:text-5xl">
-          Computer Vision
-        </h1>
-      </div>
+  const data = [
+    {
+      id: 1,
+      image: Manufacturing,
+      name: "WorkPlace Safety",
+      quote: "Utilize our advanced video analytics to create a safer environment for your workforce by detecting potential hazards, monitoring safety compliance, and preventing accidents before they occur. Our technology continuously scans the workplace, identifying unsafe conditions such as obstructed pathways, improper use of equipment, and potential slip and fall areas. By monitoring employee behavior and adherence to safety protocols in real-time, our system ensures that safety regulations are consistently followed. ",
+    },
+    {
+      id: 2,
+      image: Retail,
+      name: "Conveyer Belt Monitoring",
+      quote: "Keep your critical conveyor systems running smoothly with our state-of-the-art real-time monitoring solutions. Our technology continuously tracks the condition of your conveyor systems, identifying wear and tear before it becomes a significant issue. By detecting anomalies early, our system alerts you to potential problems, allowing you to take proactive measures. Schedule maintenance tasks ahead of time based on precise data, minimizing unexpected failures and avoiding costly downtime. Our solutions ensure that your conveyor systems operate efficiently and reliably, supporting uninterrupted production and enhancing overall operational efficiency.",
+    },
+    {
+      id: 3,
+      image: Supply,
+      name: "Process and Quality Monitoring",
+      quote: "Keep your critical conveyor systems running smoothly with our state-of-the-art real-time monitoring solutions. Our technology continuously tracks the condition of your conveyor systems, identifying wear and tear before it becomes a significant issue. By detecting anomalies early, our system alerts you to potential problems, allowing you to take proactive measures. Schedule maintenance tasks ahead of time based on precise data, minimizing unexpected failures and avoiding costly downtime. Our solutions ensure that your conveyor systems operate efficiently and reliably, supporting uninterrupted production and enhancing overall operational efficiency.",
+    },
+  ];
 
-      {/* Computer Vision in Manufacturing */}
-      <div className="w-full px-4 flex flex-col gap-7 pb-10">
-        <h2 className="text-white text-3xl md:text-4xl">
-          Conveyer Belt Monitoring{" "}
-          
-        </h2>
-        <div className="w-full flex justify-start">
-          <img src={Manufacturing} alt="manufacturing" />
-        </div>
-        <div className="flex flex-col gap-6">
-          <p className="text-white text-lg font-semibold" style={{ color: "gray" }}>
-             By implementing our industrial machine vision solutions,
-            manufacturers can automate quality control, optimise production
-            processes, and enhance worker safety through various objects and
-            pattern detection.
-          </p>
-          <button
-            className="text-medium text-white cursor-pointer text-xl bg-primary h-10 w-52 hover:
-          transition duration-500 ease-out hover:bg-white hover:text-primary "
-          >
-            Know More
-          </button>
-        </div>
-      </div>
+  const [index, setIndex] = useState(0);
+  const lastIndex = data.length - 1;
 
-      <div className="w-full px-4 flex flex-col gap-7 pb-10">
-        <h2 className="text-white text-3xl md:text-4xl">
-          Computer Vision in{" "}
-          <span className="text-primary font-bold">Retail Industries</span>
-        </h2>
-        <div className="w-full flex justify-start">
-          <img src={Retail} alt="retail" />
-        </div>
-        <div className="flex flex-col gap-6">
-          <p className="text-white text-lg" style={{ color: "gray" }}>
-            By implementing our industrial machine vision solutions,
-            manufacturers can automate quality control, optimise production
-            processes, and enhance worker safety through various objects and
-            pattern detection.
-          </p>
-          <button
-            className="text-medium text-white cursor-pointer text-xl bg-primary h-10 w-52 hover:
-          transition duration-500 ease-out hover:bg-white hover:text-primary "
-          >
-            Know More
-          </button>
-        </div>
-      </div>
+  useEffect(() => {
+    if (index < 0) {
+      setIndex(lastIndex);
+    } else if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, lastIndex]);
 
-      <div className="w-full px-4 flex flex-col gap-7 pb-10">
-        <h2 className="text-white text-3xl md:text-4xl">
-          Computer Vision in{" "}
-          <span className="text-primary font-bold">Supply Chain</span>
-        </h2>
-        <div className="w-full flex justify-start">
-          <img src={Supply} alt="supply chain" />
-        </div>
-        <div className="flex flex-col gap-6">
-          <p className="text-white text-lg" style={{ color: "gray" }}>
-            By implementing our industrial machine vision solutions,
-            manufacturers can automate quality control, optimise production
-            processes, and enhance worker safety through various objects and
-            pattern detection.
-          </p>
-          <button
-            className="text-medium text-white cursor-pointer text-xl bg-primary h-10 w-52 hover:
-          transition duration-500 ease-out hover:bg-white hover:text-primary "
-          >
-            Know More
-          </button>
-        </div>
-      </div>
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index - 1);
+    }, 5000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
 
-      <div className="w-full px-4 flex flex-col gap-7 pb-10">
-        <h2 className="text-white text-3xl md:text-4xl">
-          Computer Vision in{" "}
-          <span className="text-primary font-bold">
-            Surveillance & Security
-          </span>
-        </h2>
-        <div className="w-full flex justify-start">
-          <img src={Security} alt="security" />
-        </div>
-        <div className="flex flex-col gap-6">
-          <p className="text-white text-lg" style={{ color: "gray" }}>
-            By implementing our industrial machine vision solutions,
-            manufacturers can automate quality control, optimise production
-            processes, and enhance worker safety through various objects and
-            pattern detection.
-          </p>
-          <button
-            className="text-medium text-white cursor-pointer text-xl bg-primary h-10 w-52 hover:
-          transition duration-500 ease-out hover:bg-white hover:text-primary "
-          >
-            Know More
-          </button>
-        </div>
-      </div>
-    </div>
-    
-    
-    <div className="hidden md:flex md:flex-col md:items-center ">
-      <div className="text-white text-center pt-32 pb-24">
-        <h2 className="text-5xl pb-4 font-bold">Transform Your Business With</h2>
-        <h1 className="text-primary font-bold text-5xl">Computer Vision</h1>
-      </div>
 
-      
-
-      <div className="flex items-center justify-evenly pb-24">
-        <div className="w-[40%]">
-          <img
-            src={Manufacturing}
-            alt="manufacturing"
-            className="object-contain"
-          />
-        </div>
-        <div className="w-2/5 flex flex-col gap-8">
-          <h1 className="text-white text-4xl font-bold">
-            WorkPlace Safety{" "}
-            <span className="font-bold text-primary"></span>
-          </h1>
-          <p
-            className="text-white flex flex-col text-3xl font-semibold font-serif"
-            style={{ color: "gray" }}
-          >
-            Achieve 360° safety complaince through AI powered solutions.
-            
-              Mitigate risks and ensure a safer workplace by using vision to detect  PPE violations, fire, smoke and monitor employee health to deliver assistance in real time.
-           
-          </p>
-          
-        </div>
+  return (
+    <section id='solutions' className="section">
+      <div className="title text-2xl font-semibold">
+        <h2>Our suite of video analytics solutions is designed to address the core challenges faced by industrial operations, ensuring a safer and more efficient workplace</h2>
       </div>
-
-      <div className="flex items-center justify-evenly pb-24">
-        <div className="w-2/5 flex flex-col gap-8">
-          <h1 className="text-white text-4xl font-bold">
-            Improving Quality and Productivity using {" "}
-            <span className="font-bold text-primary">Vision</span>
-          </h1>
-          <p
-            className="text-white flex flex-col text-3xl font-semibold font-serif"
-            style={{ color: "gray" }}
-          >
-            Enhance Productivity by including visual intelligence in work flow for inspection and monitoring of high speed processors.
-          </p>
-          
-        </div>
-        <div className="w-[40%]">
-          <img
-            src={Supply}
-            alt="manufacturing"
-            className="object-contain"
-          />
-        </div>
+      <div className="section-center">
+        {data.map((item, indexPeople) => {
+          const { id, image, name, quote } = item;
+          let position = "nextSlide";
+          if (indexPeople === index) {
+            position = "activeSlide";
+          }
+          if (
+            indexPeople === index - 1 ||
+            (index === 0 && indexPeople === data.length - 1)
+          ) {
+            position = "lastSlide";
+          }
+          return (
+            <article className={position} key={id}>
+              <img src={image} alt={name} className="person-img" />
+              <h4>{name}</h4>
+              <p className="text">{quote}</p>
+            </article>
+          );
+        })}
+        <button className="prev" onClick={() => setIndex(index - 1)}>
+          <i className="fas fa-arrow-left" />
+        </button>
+        <button className="next" onClick={() => setIndex(index + 1)}>
+          <i className="fas fa-arrow-right" />
+        </button>
       </div>
-      <div className="flex items-center justify-evenly pb-24">
-        <div className="w-[40%]">
-          <img
-            src={Retail}
-            alt="manufacturing"
-            className="object-contain"
-          />
-        </div>
-        <div className="w-2/5 flex flex-col gap-8">
-          <h1 className="text-white text-4xl font-bold">
-            Conveyor Belt Monitoring{" "}
-            <span className="font-bold text-primary"></span>
-          </h1>
-          <p
-            className="text-white flex flex-col text-3xl font-semibold font-serif"
-            style={{ color: "gray" }}
-          >
-           Increase life of Conveyor Belts by 5-8 % through visual inspection for foreign Objects , training, physical damages, wear and tear.
-          </p>
-          
-        </div>
-      </div>
-    </div>
-  </>
-);
+    </section>
+  );
 }
 
 export default ComputerVision;

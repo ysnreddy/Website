@@ -51,7 +51,7 @@ const ProjectDiscussForm = () => {
 
   return (
     <div
-      id="contact"
+      
       className="p-4 flex flex-col gap-4 text-white bg-body md:items-center md:w-[86.5%] md:mx-auto"
     >
       <div className="md:text-center flex flex-col md:gap-2">

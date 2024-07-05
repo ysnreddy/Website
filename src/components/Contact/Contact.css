@@ -1,0 +1,92 @@
+/* Contact.css */
+
+.contact {
+    background-color: #e0f7fa; /* Light blue shaded background */
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .contact-heading {
+    color: #333;
+  }
+  
+  .contact-col {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-col h3 {
+    color: #333;
+  }
+  
+  .contact-col p,
+  .contact-col ul {
+    color: #444;
+  }
+  
+  .contact-col ul li {
+    display: flex;
+    align-items: center;
+    color: #444;
+  }
+  
+  .contact-col ul li img {
+    margin-right: 0.5rem;
+  }
+  
+  .contact-col form label {
+    color: #333;
+    text-align: left;
+  }
+  
+  .contact-col form input,
+  .contact-col form textarea {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-col form input:focus,
+  .contact-col form textarea:focus {
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-col form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-col form button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+  }
+  
+  .contact-col form span {
+    display: block;
+    margin-top: 1rem;
+    color: green;
+  }
+  
+  @media (min-width: 768px) {
+    .contact {
+      padding: 4rem 2rem;
+    }
+  
+    .contact-col {
+      margin-bottom: 0;
+    }
+  }
+  
+  
+  

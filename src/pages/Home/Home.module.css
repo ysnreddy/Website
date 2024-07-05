@@ -1,0 +1,128 @@
+/* Home.module.css */
+
+/* Container to ensure smooth scrolling */
+.scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  
+  /* Overlay with background opacity */
+  .bg-black.opacity-50::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Background image styling */
+  .bg-center {
+    background-position: center;
+    background-size: cover;
+  }
+  
+  /* Content styling for Hero section */
+  .relative {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .z-10 {
+    z-index: 10;
+  }
+  
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .leading-loose {
+    line-height: 1.75;
+  }
+  
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .md\\:text-5xl {
+    font-size: 3rem; /* 48px */
+  }
+  
+  .md\\:gap-8 {
+    gap: 2rem; /* 32px */
+  }
+  
+  .md\\:items-start {
+    align-items: flex-start;
+  }
+  
+  .md\\:pl-16 {
+    padding-left: 4rem; /* 64px */
+  }
+  
+  .text-lg {
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  .md\\:text-xl {
+    font-size: 1.25rem; /* 20px */
+  }
+  
+  .hover\\:leading-loose:hover {
+    line-height: 1.75;
+  }
+  
+  .transition-transform {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .hover\\:scale-110:hover {
+    transform: scale(1.1);
+  }
+  
+  .group {
+    display: inline-flex;
+  }
+  
+  .h-10 {
+    height: 2.5rem; /* 40px */
+  }
+  
+  .pl-5 {
+    padding-left: 1.25rem; /* 20px */
+  }
+  
+  .pr-5 {
+    padding-right: 1.25rem; /* 20px */
+  }
+  
+  .rounded-full {
+    border-radius: 9999px;
+  }
+  
+  .bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+  
+  .from-gray-400 {
+    --tw-gradient-from: #cbd5e0; /* Tailwind Gray 400 */
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(203, 213, 224, 0));
+  }
+  
+  .to-gray-100 {
+    --tw-gradient-to: #f7fafc; /* Tailwind Gray 100 */
+  }
+  

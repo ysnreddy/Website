@@ -7,9 +7,9 @@
 }
 
 .main_container>h2{
-    color:white;
+    color: hsl(208, 37%, 20%);
     font-size:1.5rem;
-    font-weight:600
+    font-weight:600;
 }
 
 .main_container>h2>span{

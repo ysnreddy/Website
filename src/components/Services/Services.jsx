@@ -44,15 +44,15 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="p-4 mb-10 text-white flex flex-col gap-6 md:w-[86.5%] md:m-auto md:mb-20 md:text-center lg:text-center xl:text-center md:p-0"
+      className="text-secondary bg-white flex flex-col gap-6  md:m-auto md:mb-10 md:text-center lg:text-center xl:text-center md:p-8"
     >
-      <h2 className="text-2xl">
+      <h2 className="text-4xl font-bold bg-white">
         Empowering Businesses with Advanced Vision Intelligence:
       </h2>
-      <h1 className="text-4xl font-bold text-primary">Services We Offer</h1>
+      <h1 className="text-4xl font-bold text-secondary">Services We Offer</h1>
 
       {/* Cards */}
-      <div className="flex flex-wrap justify-between gap-4 sm:gap-0 md:gap-0 lg:gap-0 xl:gap-0">
+      <div className="flex flex-wrap   justify-between gap-0 sm:gap-0 md:gap-0 lg:gap-0 xl:gap-0">
         {ServiceArray.map((Card, index) => {
           return (
             <Cards heading={Card.head} paragraph={Card.para} key={index} />
@@ -66,7 +66,7 @@ const Services = () => {
 const Cards = ({heading,paragraph}) => {
    
     return (
-        <div className={`flex flex-col gap-4 w-full transition duration-500 border-2 text-white border-gray-700 sm:w-[47%] md:w-[47%] lg:w-[30%] xl:w-[30%] p-4 hover:bg-body hover:shadow-lg hover:shadow-primary mb-[5%] text-start ${styles.hover_effect}`} >
+        <div className={`  hover:bg-zinc-300 scale-75 transition duration-500 ease-in-out transform hover:scale-110 flex flex-col gap-4 w-full transition duration-500 border-2  text-secondary border-gray-800 sm:w-[47%] md:w-[47%] lg:w-[30%] xl:w-[30%] p-4  hover:shadow-lg hover:shadow-secondary mb-[5%] text-start ${styles.hover_effect}`} >
         <h1 className="font-bold text-2xl transition duration-500">{heading}</h1>
         <p className="text-lg ">
           {paragraph}

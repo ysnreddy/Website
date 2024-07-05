@@ -8,7 +8,7 @@ import Logo3 from "../../assets/logos/CompanyLogo3.png";
 const ClientWorked = () => {
 
   return (
-    <div className="flex bg-body flex-col items-center py-0 px-0 gap-8 overflow-hidden md:flex-row ">
+    <div className=" bg-black flex bg-body flex-col items-center py-0 px-0 gap-8 overflow-hidden md:flex-row ">
       
       
      
@@ -17,7 +17,7 @@ const ClientWorked = () => {
       
         <Marquee pauseOnHover>
        
-          <div className="flex gap w-screen h-screen">
+          <div className=" bg-black flex gap w-screen h-screen">
           
             <img src={Logo1} alt="company logo" />
             <img src={Logo2} alt="company logo" />
