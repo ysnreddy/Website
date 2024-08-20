@@ -9,6 +9,7 @@ const Industries = () => {
     <div className="Industries" id="Industries">
       <div className="flex flex-col items-center justify-center gap-8 p-4 md:flex-row">
         <div className="Industry w-full md:w-1/3">
+          <h2 className="text-3xl font-bold mb-4 text-center">Steel Industry</h2> {/* Added Heading */}
           <div className="image-container">
             <img src={Steel} alt="Steel" className="w-full h-auto" />
             <div className="caption">
@@ -22,6 +23,7 @@ const Industries = () => {
 
         <div className="Industry w-full md:w-1/3">
           <div className="image-container">
+            <h2 className="text-3xl font-bold mb-4 text-center">Mining Industry</h2> {/* Added Heading */}
             <img src={Mining} alt="Mining" className="w-full h-auto" />
             <div className="caption">
               <h1 className="text-2xl font-bold text-center mb-2">Mining</h1>
@@ -34,6 +36,7 @@ const Industries = () => {
 
         <div className="Industry w-full md:w-1/3">
           <div className="image-container">
+            <h2 className="text-3xl font-bold mb-4 text-center">Manufacturing Industry</h2> {/* Added Heading */}
             <img src={Manufacture} alt="Manufacture" className="w-full h-auto" />
             <div className="caption">
               <h1 className="text-2xl font-bold text-center mb-2">Manufacturing</h1>
