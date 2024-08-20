@@ -49,7 +49,7 @@ const Contact = () => {
               <img src={mail} alt="mail" className="w-6 h-6 mr-2" /> Hello@deepnet.digital
             </li>
             <li className="flex items-center">
-              <img src={Com} alt="company" className="w-6 h-6 mr-2" /> Deepnet Analytics LLP
+              <img src={Com} alt="company" className="w-6 h-6 mr-2" /> Deepnet Analytics
             </li>
           </ul>
         </div>
