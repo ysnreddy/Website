@@ -40,13 +40,13 @@ const Contact = () => {
           </p>
           <ul className="font-sans text-lg space-y-4">
             <li className="flex items-center">
-              <img src={person} alt="person" className="w-6 h-6 mr-2" /> Mamta Tigga, Product Head
+              <img src={person} alt="person" className="w-6 h-6 mr-2" /> Bharadwaj, Product Head
             </li>
             <li className="flex items-center">
               <img src={call} alt="phone" className="w-6 h-6 mr-2" /> +91 8986874702
             </li>
             <li className="flex items-center">
-              <img src={mail} alt="mail" className="w-6 h-6 mr-2" /> mamta@deepnet.digital
+              <img src={mail} alt="mail" className="w-6 h-6 mr-2" /> Hello@deepnet.digital
             </li>
             <li className="flex items-center">
               <img src={Com} alt="company" className="w-6 h-6 mr-2" /> Deepnet Analytics LLP
