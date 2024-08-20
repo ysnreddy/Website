@@ -17,4 +17,11 @@
       flex-direction: row;
     }
   }
+
+ p {
+    
+    line-height: 1.75; /* Adjust line height for better readability */
+    text-align: justify; /* Justify the text for even alignment */
+    word-break: keep-all; /* Prevent breaking words in awkward places */
+    overflow-wrap: break-word;
   
