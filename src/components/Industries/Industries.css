@@ -11,6 +11,13 @@
     margin-bottom: 2rem; /* Add some spacing between industries on mobile */
     cursor: pointer;
   }
+
+/* Optional: Additional styling for the new heading */
+.Industry h2 {
+  color: #333; /* Example color */
+  margin-bottom: 1rem;
+}
+
   
   .image-container {
     position: relative;
